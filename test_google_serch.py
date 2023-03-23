@@ -8,5 +8,5 @@ def test_search_selene(browser_preparation):
 
 
 def test_search_selene_negative(browser_preparation):
-    browser.element('[name="q"]').should(be.blank).type('google').press_enter()
-    assert browser.element('[id="search"]').should(have.no.text('Wrong request'))
+    browser.element('[name="q"]').should(be.blank).type('mfhdjkghjkghfgjkfhgjkfsgjnksfdgfg').press_enter()
+    assert browser.element('.card-section').should(have.text('По запросу mfhdjkghjkghfgjkfhgjkfsgjnksfdgfg ничего не найдено'))
